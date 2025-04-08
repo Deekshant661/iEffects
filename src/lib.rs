@@ -20,11 +20,13 @@ pub fn grayscale(encoded_file: &str) -> String {
     image = image.grayscale();
     log(&"Grayscale effect applied".into());
 
+    //Creating a buffer
     let mut buffer = vec![];
     image.write_to(&mut buffer, Png).unwrap();
     log(&"New image written".into());
 
     let encoded_image = encode(&buffer);
+    //encode function returns a string
     let data_url = format!("data:image/png;base64,{}", &encoded_image);
 
     data_url
@@ -46,10 +48,12 @@ pub fn blur(encoded_file: &str) -> String {
     image = image.blur(0.10);
     log(&"Blur effect applied".into());
 
+    //Creating a buffer
     let mut buffer = vec![];
     image.write_to(&mut buffer, Png).unwrap();
     log(&"New image written".into());
 
+    //encode function returns a string
     let encoded_image = encode(&buffer);
     let data_url = format!("data:image/png;base64,{}", &encoded_image);
 

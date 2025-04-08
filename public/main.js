@@ -39,15 +39,15 @@ async function init() {
     currentEffect = null; // Reset after applying
   };
 
-  //  Effect button click handlers
+  // Effect button click handlers
   document.getElementById('grayscale-btn').addEventListener('click', () => {
     currentEffect = 'grayscale';
-    input.click(); // Trigger upload
+    input.click();
   });
 
   document.getElementById('blur-btn').addEventListener('click', () => {
     currentEffect = 'blur';
-    input.click(); // Trigger upload
+    input.click();
   });
 
   // When file is chosen
