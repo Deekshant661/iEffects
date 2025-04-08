@@ -39,7 +39,7 @@ async function init() {
     currentEffect = null; // Reset after applying
   };
 
-  // 🖱️ Effect button click handlers
+  //  Effect button click handlers
   document.getElementById('grayscale-btn').addEventListener('click', () => {
     currentEffect = 'grayscale';
     input.click(); // Trigger upload
@@ -50,7 +50,7 @@ async function init() {
     input.click(); // Trigger upload
   });
 
-  // 🎯 When file is chosen
+  // When file is chosen
   input.addEventListener('change', () => {
     if (input.files.length > 0) {
       fileReader.readAsDataURL(input.files[0]);
