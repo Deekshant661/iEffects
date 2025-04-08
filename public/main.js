@@ -31,7 +31,8 @@ async function init() {
       document.getElementById('new-img').setAttribute('src', image_data_url);
 
       //show reload msg
-      document.getElementById('info-msg').classList.remove('hidden');
+      const message = document.getElementById('message');
+      message.textContent = "Effect applied! Please reload the page to use another effect.";
     }
     
 
