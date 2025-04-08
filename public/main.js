@@ -29,7 +29,11 @@ async function init() {
 
     if (image_data_url) {
       document.getElementById('new-img').setAttribute('src', image_data_url);
+
+      //show reload msg
+      document.getElementById('info-msg').classList.remove('hidden');
     }
+    
 
     currentEffect = null; // Reset after applying
   };
@@ -56,27 +60,3 @@ async function init() {
 init();
 
 
-
-// function init(){
-//   const input = document.getElementById('upload')
-//   const fileReader = new FileReader()
-
-//   //This function will be called when the file is loaded. it is safe to access the file inside this function
-//   fileReader.onloadend = () => {
-//     let base64 = fileReader.result.replace(
-//       /^data:image\/(png|jpeg|jpg);base64,/, ''
-//     )
-//     console.log(input.files[0])
-//     console.log(base64)
-//   }
-
-//   //We are going to listen to the event on this element
-//   input.addEventListener('change', () => 
-//     fileReader.readAsDataURL(input.files[0])
-//   )
-//   //change event is fired whenever the user has uploaded a image onto the input element
-
-
-// }
-
-// init()
