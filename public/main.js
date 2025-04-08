@@ -1,6 +1,3 @@
-//importing a file is an asynchronous function. 
-//That's why we have used the init keyword
-
 async function init() {
   let rustApp = null;
 
