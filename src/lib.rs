@@ -45,7 +45,7 @@ pub fn blur(encoded_file: &str) -> String {
     let mut image = load_from_memory(&base64_to_vector).unwrap();
     log(&"Image loaded".into());
 
-    image = image.blur(0.10);
+    image = image.blur(1.5);
     log(&"Blur effect applied".into());
 
     //Creating a buffer
