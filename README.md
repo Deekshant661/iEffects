@@ -53,6 +53,8 @@ npm install
 npm run serve
 ```
 
-
+### Deployment
+The project is deployed using Vercel.
+Deployed link: https://i-effects.vercel.app/
 
 
